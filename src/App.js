@@ -6,7 +6,15 @@ import Ipfs from 'ipfs'
 
 class App extends Component {
   componentDidMount() {
-    const ipfs = new Ipfs()
+    const ipfs = new Ipfs({
+      config: {
+        Addresses: {
+          Swarm: [
+            '/dns4/ws-star.discovery.libp2p.io/tcp/443/wss/p2p-websocket-star'
+          ]
+        }
+      }
+    })
     ipfs.on('ready', (err1) => {
       ipfs.version((err2, ver) => {
         console.log(ver, err1, err2)

@@ -9,13 +9,10 @@
     "react-scripts": "2.0.0-next.66cc7a90"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "resolutions": {
-    "libp2p-switch": "libp2p/js-libp2p-switch#feat/swap-quick-lru"
   },
   "browserslist": {
     "development": [
